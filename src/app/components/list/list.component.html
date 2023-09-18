@@ -1,0 +1,14 @@
+<h2>Todos: </h2>
+<ul class="list-group">
+  <li class="list-group-item todo" *ngFor="let todo of todos; index as i">
+
+    <p *ngIf="!todo.completed" class="todo-text">{{ todo.task }}</p>
+    <p *ngIf="todo.completed" class="todo-text completed">{{ todo.task }}</p>
+    
+    <div class="btn-group">
+      <button *ngIf="!todo.completed" type="button" class="btn btn-info" (click)="onComplete(i)">Completed</button>
+      <button *ngIf="todo.completed" type="button" class="btn btn-info" (click)="onComplete(i)">Not Completed</button>
+      <button type="button" class="btn btn-danger" (click)="onDelete(i)">Delete Todo</button>
+    </div>
+  </li>
+</ul>

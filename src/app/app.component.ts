@@ -5,6 +5,13 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
-  title = 'first-app';
+  newTodo: string;
+  todos: string[] = [];
+
+  addTodo = () => {
+    this.todos.push(this.newTodo)
+    console.log(this.todos)
+  }
 }

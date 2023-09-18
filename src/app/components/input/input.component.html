@@ -1,0 +1,12 @@
+<div class="jumbotron">
+    <h1>Hello World, this is Todo App</h1>
+    <p>Please enter your next task.</p>
+    
+    <div class="input-group">
+        <input type="text-lg" class="form-control" [(ngModel)]="newTodo" placeholder="New Todo..." aria-describedby="basic-addon1">
+        <div class="input-group-btn">
+            <button type="button" class="btn btn-success" (click)="addTodo()">Add Todo</button>
+        </div>
+    </div>
+</div>
+<app-list [todos]="todos"></app-list>
